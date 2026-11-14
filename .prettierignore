@@ -1,0 +1,17 @@
+node_modules/
+dist/
+.build/
+.local-build/
+design/
+review/
+engineering/
+evidence/
+releases/
+test-results/
+skills/
+contracts/
+tooling/local-client/contracts/
+**/pnpm-lock.yaml
+**/*.snapshot.json
+**/published-contracts.json
+packages/application/src/shared-skill-rules/bundle.generated.ts

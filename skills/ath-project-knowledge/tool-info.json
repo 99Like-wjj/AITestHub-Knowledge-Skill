@@ -1,0 +1,57 @@
+{
+  "schemaVersion": "aitesthub.skill-tool-info.v1",
+  "skillId": "ath-project-knowledge",
+  "version": "0.1.0",
+  "ruleVersion": "0.1.0",
+  "decisionOwner": "current AI and explicit human selection",
+  "officialTools": {
+    "ath_knowledge": ["list-index", "search", "get"],
+    "ath_knowledge_changes": [
+      "compare",
+      "get-comparison",
+      "get-selection-receipts"
+    ],
+    "ath_operation_status": [
+      "get knowledge.compare",
+      "get knowledge.commit-selection"
+    ]
+  },
+  "runtimeMethods": [
+    "listIndex",
+    "getContent",
+    "getComparison",
+    "prepareComparison",
+    "dispatchComparison",
+    "recoverComparison",
+    "readSelectionByOriginalKey",
+    "readSelectionPage"
+  ],
+  "localCommands": [
+    "create",
+    "summary",
+    "add-source",
+    "put-draft",
+    "inspect-recovery",
+    "recover",
+    "inspect-lock",
+    "release-lock"
+  ],
+  "limits": {
+    "localDrafts": 100,
+    "explicitRemoteEntries": 100,
+    "singleIndexPage": 200,
+    "workFileBytes": 16777216,
+    "singleLocalInputBytes": 1048576
+  },
+  "nonCapabilities": [
+    "model invocation",
+    "automatic merge",
+    "source code upload",
+    "MCP authentication",
+    "arbitrary SQL",
+    "automatic replay",
+    "independent local knowledge authority",
+    "HTML service"
+  ],
+  "dependency": { "name": "zod", "version": "4.6.7", "license": "MIT" }
+}

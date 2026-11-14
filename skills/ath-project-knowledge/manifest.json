@@ -1,0 +1,40 @@
+{
+  "manifestVersion": "0.1.0",
+  "skillId": "ath-project-knowledge",
+  "version": "0.1.0",
+  "ruleVersion": "0.1.0",
+  "license": "MIT",
+  "releaseStatus": "candidate",
+  "targets": ["local", "platform"],
+  "runtime": {
+    "node": "24.19.0",
+    "localEntry": "runtime/src/local.js",
+    "platformEntry": "runtime/src/platform.js",
+    "localCommand": "scripts/work.mjs",
+    "modelCalls": false,
+    "automaticRetry": false,
+    "embeddedAuthentication": false
+  },
+  "ports": {
+    "abiVersion": "0.1.0",
+    "tools": "host configured official MCP raw CallToolResult",
+    "results": "shared ResultPort.read and assertSafe",
+    "workspace": "approved private root or injected WorkspacePort",
+    "fileChannel": "shared streaming FileChannelPort; no byte array export"
+  },
+  "officialContract": {
+    "protocolVersion": "2026-07-28",
+    "snapshot": "runtime/src/contracts/knowledge.13a8a1d7.snapshot.json",
+    "snapshotSha256": "be11ee26be43d1ba5ed7ff2eef66e2407a19fc2d48f1180234dcbf4098803d12",
+    "structuralValidationOnly": true,
+    "serverRemainsBusinessAuthority": true
+  },
+  "verification": {
+    "component": "see repository verification record",
+    "installation": "not-performed",
+    "hostLoad": "not-verified",
+    "liveMcp": "not-verified",
+    "crossClientHumanSelection": "not-verified",
+    "realMaterialExtraction": "not-verified"
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "name": "@aitesthub/project-knowledge-skill",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "license": "MIT",
+  "packageManager": "pnpm@11.28.11",
+  "engines": {
+    "node": "24.19.0",
+    "pnpm": "11.28.11"
+  },
+  "exports": {
+    ".": "./dist/src/index.js",
+    "./local": "./dist/src/local.js",
+    "./platform": "./dist/src/platform.js"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "package": "pnpm build && node scripts/package.mjs",
+    "verify:package": "node scripts/verify-package.mjs && node scripts/verify-runtime.mjs",
+    "format:check": "prettier --check \"src/**/*.ts\" \"scripts/*.mjs\" package.json tsconfig.json"
+  },
+  "dependencies": {
+    "zod": "4.6.7"
+  },
+  "devDependencies": {
+    "@types/node": "24.10.0",
+    "typescript": "6.0.3",
+    "vitest": "5.1.0",
+    "prettier": "3.10.0"
+  },
+  "files": [
+    "dist/src",
+    "skills/ath-project-knowledge",
+    "LICENSE",
+    "NOTICE",
+    "pnpm-lock.yaml"
+  ]
+}
