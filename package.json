@@ -19,7 +19,9 @@
     "typecheck": "tsc -p tsconfig.json --noEmit",
     "package": "pnpm build && node scripts/package.mjs",
     "verify:package": "node scripts/verify-package.mjs && node scripts/verify-runtime.mjs",
-    "format:check": "prettier --check \"src/**/*.ts\" \"scripts/*.mjs\" package.json tsconfig.json"
+    "format:check": "prettier --check \"src/**/*.ts\" \"scripts/*.mjs\" package.json tsconfig.json",
+    "format:docs": "prettier --check AGENTS.md AGENTS.example.md CONTRIBUTING.md SECURITY.md README.md SOURCE_PUBLICATION.md \"docs/development/*.md\" .github/pull_request_template.md .prettierrc.json",
+    "quality:check": "pnpm format:check && pnpm format:docs && pnpm typecheck"
   },
   "dependencies": {
     "zod": "4.6.7"

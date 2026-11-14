@@ -15,3 +15,6 @@ tooling/local-client/contracts/
 **/*.snapshot.json
 **/published-contracts.json
 packages/application/src/shared-skill-rules/bundle.generated.ts
+
+# Private operational context is not source/build input.
+/AGENTS.local.md

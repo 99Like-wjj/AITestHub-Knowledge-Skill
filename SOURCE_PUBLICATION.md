@@ -7,3 +7,5 @@ Generated integrity manifests can be rebuilt from included sources. Original fro
 This publication does not establish native-host installation, automatic loading, real model success or full-system acceptance.
 
 Test suites, test-only runners and private test-command manifests are intentionally excluded. Build and package entry points operate on application/Skill source without requiring those private files.
+
+The public AGENTS.md, CONTRIBUTING.md and docs/development contain generic source-development rules. Private operational context is retained separately in AGENTS.local.md and stays ignored. Publishing standards does not authorize publishing private product design or test material.

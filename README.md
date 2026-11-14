@@ -15,3 +15,11 @@ Real material, workspaces and credentials stay outside Git. Native installation/
 See SECURITY.md and SOURCE_PUBLICATION.md.
 
 Test source and test-only scripts are retained separately in the private local workspace.
+
+## Development standards
+
+Read [AGENTS.md](AGENTS.md), [CONTRIBUTING.md](CONTRIBUTING.md) and the [current development standards](docs/development/README.md) before changing code, configuration or packaging.
+
+Run pnpm quality:check for source/document formatting and strict type checks. Architecture, privacy and behavior still require the [review checklist](docs/development/review-checklist.md); this command does not establish deployment or live acceptance.
+
+Private operational history remains in the ignored AGENTS.local.md when present. Generic engineering standards may be versioned; private product design, tests, instances and real evidence remain excluded.

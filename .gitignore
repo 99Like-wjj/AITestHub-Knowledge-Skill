@@ -39,3 +39,7 @@ __tests__/
 **/vitest.config.*
 **/package.local-tests.json
 **/tsconfig.local-tests.json
+
+# Public instruction entry; private operational appendix stays local.
+!/AGENTS.md
+/AGENTS.local.md
