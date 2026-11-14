@@ -1,0 +1,17 @@
+AITestHub Project Knowledge Skill 0.1.0
+Copyright (c) 2026 AITestHub contributors. MIT; see LICENSE.
+
+The distribution bundles Zod 4.6.7, copyright Colin McDonnell and contributors,
+under the MIT license. Its unmodified runtime files and LICENSE are located at
+runtime/node_modules/zod/; source/tests are omitted. Zod is a validation
+dependency, not a model service.
+
+Generated contract subsets derive from the AITestHub official local-client
+contract artifact. Original catalog/components and eight source hashes are
+retained in the runtime/src/contracts/knowledge.*.snapshot.json artifact.
+Structural schema
+validation does not replace current server permissions or business refinements.
+
+Node.js and the host-configured MCP client are runtime prerequisites and are not
+bundled. No credentials, work drafts, real project material or test evidence are
+included in the Skill distribution.

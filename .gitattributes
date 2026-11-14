@@ -1,0 +1,10 @@
+* text=auto eol=lf
+*.png binary
+*.ico binary
+pnpm-lock.yaml -text
+skills/** -text
+contracts/** -text
+tooling/local-client/contracts/** -text
+**/*.snapshot.json -text
+**/published-contracts.json -text
+packages/application/src/shared-skill-rules/bundle.generated.ts -text

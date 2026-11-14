@@ -1,0 +1,4 @@
+interface:
+  display_name: "AITestHub 项目知识"
+  short_description: "按需整理项目地图与规则，在平台比较并逐项确认知识变更，保留基准和历史"
+  default_prompt: "使用 $ath-project-knowledge 整理本次授权资料，先核对项目和轻索引，再说明知识差异。"
