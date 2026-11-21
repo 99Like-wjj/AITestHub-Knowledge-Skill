@@ -1,4 +1,6 @@
-# 运行工具与集成（0.1.0）
+# 运行工具与集成（0.1.1）
+
+新工作稿使用 `ath.knowledge-work.v2`，写入时包含独立的选择分页回执数组 `selectionPages`。已有旧工作稿和待确认回执按原版本留存，由对应版本核对。
 
 运行代码通过注入的ToolPort调用宿主已配置官方MCP。原CallToolResult由共享协议ResultPort读取并执行安全检查，业务层只校验知识DTO；这里没有HTTP鉴权、Key管理、自动重试或模型调用。
 

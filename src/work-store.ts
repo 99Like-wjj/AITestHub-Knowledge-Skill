@@ -2,7 +2,7 @@ import { randomUUID } from 'node:crypto';
 import type { WorkspacePort } from './ports.js';
 import { canonical, digest } from './canonical.js';
 import { fail } from './errors.js';
-import { id, workSchema, type Work } from './schemas.js';
+import { id, WORK_SCHEMA_VERSION, workSchema, type Work } from './schemas.js';
 import { z } from 'zod';
 const transactionSchema = z.strictObject({
   transactionId: id,
@@ -39,6 +39,12 @@ export class WorkStore {
     } catch {
       return fail('WORK_INVALID', '工作稿无法解析，不会重建或覆盖。');
     }
+    const version = z.object({ schemaVersion: z.string() }).safeParse(value);
+    if (version.success && version.data.schemaVersion !== WORK_SCHEMA_VERSION)
+      fail(
+        'WORK_VERSION_UNSUPPORTED',
+        '工作稿版本不受当前工具支持，原稿及回执已保留。',
+      );
     const work = workSchema.parse(value);
     if (text !== canonical(work) + '\n')
       fail(
@@ -57,7 +63,7 @@ export class WorkStore {
   }
   async create(projectId: string, spaceId: string): Promise<WorkSnapshot> {
     const work = workSchema.parse({
-      schemaVersion: 'ath.knowledge-work.v1',
+      schemaVersion: WORK_SCHEMA_VERSION,
       workId: randomUUID(),
       projectId,
       spaceId,
@@ -67,6 +73,7 @@ export class WorkStore {
       intents: [],
       comparisons: [],
       selectionReceipts: [],
+      selectionPages: [],
       mappings: [],
     });
     return this.workspace.withExclusive(

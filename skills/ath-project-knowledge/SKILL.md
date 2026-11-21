@@ -2,7 +2,7 @@
 name: ath-project-knowledge
 description: 通过AITestHub维护项目功能地图、通用规则和知识条目，按需读取、比较双方资料并交平台逐项处理。适用于整理、更新、比较或恢复项目知识；配置生效与测试审批仍由平台各自能力负责。
 metadata:
-  version: "0.1.0"
+  version: "0.1.1"
 ---
 
 # AITestHub 项目知识

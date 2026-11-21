@@ -519,7 +519,7 @@ export class KnowledgeWorkflow {
       (work) => {
         for (const selection of page.data.selections)
           applySelectionReceipt(work, comparison, selection.receipt);
-        (work.selectionPages ??= []).push({
+        work.selectionPages.push({
           comparisonId,
           scopeDigest: page.data.scopeDigest,
           afterSelectionId: query.afterSelectionId ?? null,

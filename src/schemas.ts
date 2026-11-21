@@ -191,9 +191,10 @@ const intent = z.strictObject({
   failureCode: z.string().nullable(),
   comparisonId: id.nullable(),
 });
+export const WORK_SCHEMA_VERSION = 'ath.knowledge-work.v2';
 export const workSchema = z
   .strictObject({
-    schemaVersion: z.literal('ath.knowledge-work.v1'),
+    schemaVersion: z.literal(WORK_SCHEMA_VERSION),
     workId: id,
     projectId: id,
     spaceId: id,
@@ -215,8 +216,7 @@ export const workSchema = z
           nextCursor: id.nullable(),
         }),
       )
-      .max(500)
-      .optional(),
+      .max(500),
     mappings: z
       .array(
         z.strictObject({

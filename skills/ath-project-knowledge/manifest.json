@@ -1,8 +1,8 @@
 {
   "manifestVersion": "0.1.0",
   "skillId": "ath-project-knowledge",
-  "version": "0.1.0",
-  "ruleVersion": "0.1.0",
+  "version": "0.1.1",
+  "ruleVersion": "0.1.1",
   "license": "MIT",
   "releaseStatus": "candidate",
   "targets": ["local", "platform"],
